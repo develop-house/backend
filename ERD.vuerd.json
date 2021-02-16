@@ -1,0 +1,308 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0.8333333134651184,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "devhoust",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "user",
+        "comment": "유저",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "유저 아이디",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 62,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6cd66241-24c5-0c0b-44e6-6bd0be58ed9a"
+          },
+          {
+            "name": "name",
+            "comment": "유저 이름",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 86,
+              "widthDefault": 60
+            },
+            "id": "9a2d4fd2-8aea-4108-5f2c-29225c0e0868"
+          },
+          {
+            "name": "country",
+            "comment": "유저 나라",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 86,
+              "widthDefault": 60
+            },
+            "id": "096dfe42-65c5-ce08-493f-b81ed86798a8"
+          },
+          {
+            "name": "created",
+            "comment": "가입 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "de8d4e87-b592-7ff4-c9e1-c82d8e7b2cd3"
+          },
+          {
+            "name": "profile",
+            "comment": "유저 소개",
+            "dataType": "VARCHAR(300)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 89,
+              "widthDefault": 60
+            },
+            "id": "6f3e3cc1-ef73-95fe-f620-2e14054bc616"
+          },
+          {
+            "name": "blacklist",
+            "comment": "블랙리스트 유무",
+            "dataType": "BOOL",
+            "default": "false",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 85,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "55340877-d0f6-cd53-cd18-58da8af2c65a"
+          },
+          {
+            "name": "disabledAt",
+            "comment": "계정정지 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 73,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7383ffb1-c782-b581-61f6-9f04d3965e44"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 44.83333331346512,
+          "top": 74,
+          "zIndex": 270,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "069add8b-dfef-7572-ee50-11bc12c7967a"
+      },
+      {
+        "name": "club",
+        "comment": "클럽(룸)",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "클럽 아이디",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": true,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 62,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8f990174-9431-cbb4-6468-5da58de66c8e"
+          },
+          {
+            "name": "description",
+            "comment": "클럽 소개",
+            "dataType": "VARCHAR(300)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63,
+              "widthComment": 60,
+              "widthDataType": 89,
+              "widthDefault": 60
+            },
+            "id": "6a6d844c-e2a0-8ba5-a4b2-337955862008"
+          },
+          {
+            "name": "type",
+            "comment": "클럽 타입",
+            "dataType": "VARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 78,
+              "widthDefault": 60
+            },
+            "id": "3cc5511b-4c81-3172-01d2-7707e62e9b75"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 53,
+          "top": 362,
+          "zIndex": 301,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "effa943e-9e04-0027-480f-a0fe8ff188a4"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
