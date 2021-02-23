@@ -200,13 +200,59 @@
               "widthDefault": 60
             },
             "id": "3335ed9b-0cfa-13d6-d36f-ca75d5d0be3d"
+          },
+          {
+            "name": "email",
+            "comment": "유저 이메일",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70,
+              "widthDataType": 84,
+              "widthDefault": 60
+            },
+            "id": "6eba3b76-dee7-ad0d-a4bc-d86b16f98aa1"
+          },
+          {
+            "name": "password",
+            "comment": "유저 비밀번호",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61,
+              "widthComment": 83,
+              "widthDataType": 84,
+              "widthDefault": 60
+            },
+            "id": "b0d96702-b0a8-6a25-3527-50716a3863e0"
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 549.8333333134651,
           "top": 317,
-          "zIndex": 688,
+          "zIndex": 714,
           "widthName": 60,
           "widthComment": 60
         },
@@ -478,7 +524,7 @@
             "6cd66241-24c5-0c0b-44e6-6bd0be58ed9a"
           ],
           "x": 1032.8333333134651,
-          "y": 476.375,
+          "y": 380.375,
           "direction": "right"
         },
         "end": {
@@ -487,7 +533,7 @@
             "2f493edb-f0de-120c-88a2-c9193d09f43a"
           ],
           "x": 1208,
-          "y": 466.5,
+          "y": 411.5,
           "direction": "left"
         },
         "id": "170aeb76-f065-1320-fcc2-b085eef5792f",
@@ -501,7 +547,7 @@
             "6cd66241-24c5-0c0b-44e6-6bd0be58ed9a"
           ],
           "x": 1032.8333333134651,
-          "y": 370.125,
+          "y": 507.125,
           "direction": "right"
         },
         "end": {
@@ -510,7 +556,7 @@
             "d6f7e4bd-7148-3c5a-7a1f-21b5861283f0"
           ],
           "x": 1208,
-          "y": 411.5,
+          "y": 466.5,
           "direction": "left"
         },
         "id": "0e594a05-2e6f-86ad-1434-1cf69c97b345",
@@ -524,7 +570,7 @@
             "6cd66241-24c5-0c0b-44e6-6bd0be58ed9a"
           ],
           "x": 791.3333333134651,
-          "y": 529.5,
+          "y": 570.5,
           "direction": "bottom"
         },
         "end": {
