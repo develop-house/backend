@@ -5,16 +5,16 @@ import { ClubService } from './club.service';
 
 @Controller('Club')
 export class ClubController {
-  constructor(private ClubService: ClubService) {}
+  constructor(private clubService: ClubService) {}
   @Get('/')
   async findAll(): Promise<Club[]> {
-    const ClubList = await this.ClubService.findAll();
+    const ClubList = await this.clubService.findAll();
     return ClubList;
   }
 
   @Post('/create')
   async create(@Body() createClubDto: CreateClubDto): Promise<Club> {
-    const result = await this.ClubService.create(createClubDto);
+    const result = await this.clubService.create(createClubDto);
     console.log('result', result);
     return result;
   }

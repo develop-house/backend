@@ -1,14 +1,14 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { ClubType } from '../dto/club-create.dto';
+import {ClubType} from '../dto/club-create.dto';
 
 export type ClubDocument = Club & Document;
 
 @Schema()
 export class Club {
   
-  @Prop({ required: true })
-  type: ClubType;
+  @Prop({ required: true,  enum:ClubType})
+  type:string
 
   @Prop({ default: null })
   description: string | null;
