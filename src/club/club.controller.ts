@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateClubDto } from './dto/club-create.dto';
 import { Club } from './schemas/club.schema';
-import { ClubService } from './Club.service';
+import { ClubService } from './club.service';
 
 @Controller('Club')
 export class ClubController {
