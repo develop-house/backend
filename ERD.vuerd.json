@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 672.5,
-    "scrollLeft": 403.33331298828125,
+    "scrollTop": 689.1666259765625,
+    "scrollLeft": 533.3333129882812,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -501,7 +501,7 @@
   "memo": {
     "memos": [
       {
-        "value": "user 테이블에서 blacklist는 블랙리스트 유무를 쉽게 관리할 수 있도록 bool 값으로 한다.\nblacklist 테이블에서 count로 신고받은 내용을 검토 후, 카운팅을 하며, 우리가 정한 규칙(신고3회 = 블랙리스트 뱃지 1개, 뱃지 3개 = 계정 정지) 대로 유효 누적 신고 개수가 9개가 넘어가면 계정을 정지한다.    ",
+        "value": "user 테이블에서 blacklist는 블랙리스트 유무를 쉽게 관리할 수 있도록 bool 값으로 한다.\nblacklist 테이블에서 count로 신고받은 내용을 검토 후, 카운팅을 하며, 우리가 정한 규칙(신고3회 = 블랙리스트 뱃지 1개, 뱃지 3개 = 계정 정지) 대로 유효 누적 신고 개수가 9개가 넘어가면 계정을 정지한다.           ",
         "id": "d76f198b-8614-1f83-3fbf-a41d5fbd0e9c",
         "ui": {
           "active": false,
