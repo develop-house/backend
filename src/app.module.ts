@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
-import { ClubModule } from "./club/club.module";
+import { ClubModule } from './club/club.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://db_mongo'), UserModule, ClubModule],
+  imports: [TypeOrmModule.forRoot(), UserModule, ClubModule],
   controllers: [AppController],
   providers: [AppService],
 })

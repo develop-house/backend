@@ -1,19 +1,20 @@
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { CreateClubDto } from './dto/club-create.dto';
-import { Club, ClubDocument } from './schemas/club.schema';
+import { Club } from './entity/club.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class ClubService {
-    constructor(@InjectModel(Club.name) private clubModel: Model<ClubDocument>){}
+  constructor(
+    @InjectRepository(Club)
+    private clubRepository: Repository<Club>,
+  ) {}
 
-    async create(createClubDto: CreateClubDto): Promise<Club> {
-        const createdUser = new this.clubModel(createClubDto);
-        return createdUser.save();
-      }
-      async findAll(): Promise<Club[]> {
-        return this.clubModel.find().exec();
-      }
-    
+  async create(createClubDto: CreateClubDto): Promise<Club> {
+    return this.clubRepository.save(createClubDto);
+  }
+  async findAll(): Promise<Club[]> {
+    return this.clubRepository.find();
+  }
 }

@@ -1,25 +1,28 @@
-version: "3"
+version: "3.5"
 services:
   devhoust-backend:
+    links:
+      - db:db_mysql
     depends_on:
       - db
     restart: always
     build: .
     ports:
       - "13000:13000"
-    environment:
-      - DB_URL=mongodb://db_mongo
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
       
   db:
-    image: mongo
-    container_name: db_mongo
+    image: mysql:5.7
+    container_name: db_mysql
     volumes:
-      - mongodata:/data/db
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: devhouse
     ports:
-      - "27017:27017"
-
+      - "3306:3306"
 volumes:
-  mongodata: 
+  db_data:
