@@ -1,12 +1,14 @@
+import { JoinList } from 'src/join_list/entity/joinList.entity';
+import { UserToClub } from 'src/user_to_club/entity/userToClub.entity';
 import {
   Column,
   Entity,
-  JoinTable,
-  ManyToMany,
+  JoinColumn,
+  OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { ClubType } from '../dto/club-create.dto';
-import { User } from '../../user/entity/user.entity';
 
 @Entity()
 export class Club {
@@ -21,4 +23,11 @@ export class Club {
 
   @Column({ nullable: false })
   limit: number;
+
+  @OneToMany(type=>UserToClub, userToClub=>userToClub.clubID)
+  clubIDs:UserToClub[];
+
+  @OneToOne(type=>JoinList)
+  @JoinColumn()
+  joinList:JoinList;
 }

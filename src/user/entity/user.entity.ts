@@ -1,39 +1,44 @@
+import { Blacklist } from 'src/blacklist/entity/blacklist.entity';
+import { Follow } from 'src/follow/entitiy/follow.entity';
+import { UserToClub } from 'src/user_to_club/entity/userToClub.entity';
 import {
   Column,
   Entity,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   ManyToMany,
-  JoinTable,
+  OneToMany,
+  OneToOne,
+  JoinColumn,
 } from 'typeorm';
-import { Club } from '../../club/entity/club.entity';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({type:'int' })
   id: number;
 
-  @CreateDateColumn()
+  @CreateDateColumn({default:Date.now()})
   createdAt: Date;
 
-  @Column({ unique: true, nullable: false })
-  nickname: string;
-
-  @Column({ default: false, nullable: false })
-  blacklist_count: boolean;
-
-  @Column({ default: null })
-  disableAt: Date | null;
-
-  @Column({ default: null })
-  introduction: string | null;
-
-  @Column({ default: null })
-  photo: string | null;
-
-  @Column({ unique: true, nullable: false })
+  @Column({ type:'varchar', unique: true, nullable: false })
   email: string;
 
-  @Column({ unique: true, nullable: false })
+  @Column({ type:'varchar', unique: true, nullable: false })
   password: string;
+
+  //follow
+  @OneToMany(type=>Follow, follow=>follow.follower)
+  followers:Follow[];
+
+  @ManyToMany(type=>Follow, follow=>follow.following)
+  following: Follow[];
+
+  //userToClub
+  @OneToMany(type=>UserToClub, userToClub=>userToClub.userID)
+  userIDs:UserToClub[];
+
+  //blacklist
+  @OneToOne(type=>Blacklist)
+  @JoinColumn()
+  blacklist:Blacklist;
 }

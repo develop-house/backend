@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 112.49999237060547,
-    "scrollLeft": 106.66666412353516,
+    "scrollTop": 504.9999694824219,
+    "scrollLeft": 474.9999694824219,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -244,7 +244,7 @@
           "active": false,
           "left": 586,
           "top": 854,
-          "zIndex": 1000,
+          "zIndex": 1024,
           "widthName": 60,
           "widthComment": 60
         },
@@ -302,17 +302,17 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1138,
-          "top": 335,
-          "zIndex": 1017,
+          "top": 336,
+          "zIndex": 1018,
           "widthName": 60,
           "widthComment": 60
         },
         "id": "771ad595-81c6-dac2-0ade-4cafa9184c0b"
       },
       {
-        "name": "create",
+        "name": "user-to-club",
         "comment": "클럽 개설",
         "columns": [
           {
@@ -386,11 +386,11 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 601,
           "top": 615,
-          "zIndex": 971,
-          "widthName": 60,
+          "zIndex": 1054,
+          "widthName": 70,
           "widthComment": 60
         },
         "id": "23771a01-d6b8-e1aa-0ac7-124d3f449ea8"
@@ -588,7 +588,7 @@
       },
       {
         "name": "join_list",
-        "comment": "클럽 참여 목록",
+        "comment": "클럽 명단",
         "columns": [
           {
             "name": "id",
@@ -641,9 +641,9 @@
           "active": false,
           "left": 123.83332824707031,
           "top": 874.8333129882812,
-          "zIndex": 1016,
+          "zIndex": 1048,
           "widthName": 60,
-          "widthComment": 77
+          "widthComment": 60
         },
         "id": "eb0aafab-48ba-2781-c527-e204802d91fa"
       }
@@ -693,7 +693,7 @@
             "2f493edb-f0de-120c-88a2-c9193d09f43a"
           ],
           "x": 1138,
-          "y": 362.5,
+          "y": 363.5,
           "direction": "left"
         },
         "id": "170aeb76-f065-1320-fcc2-b085eef5792f",
@@ -716,7 +716,7 @@
             "d6f7e4bd-7148-3c5a-7a1f-21b5861283f0"
           ],
           "x": 1138,
-          "y": 417.5,
+          "y": 418.5,
           "direction": "left"
         },
         "id": "0e594a05-2e6f-86ad-1434-1cf69c97b345",
