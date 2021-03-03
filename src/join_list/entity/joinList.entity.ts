@@ -1,17 +1,11 @@
 import { Club } from 'src/club/entity/club.entity';
-import {
-    Column,
-    Entity,
-    ManyToOne,
-    PrimaryGeneratedColumn,
-  } from 'typeorm';
-  
-  @Entity()
-  export class JoinList {
-    @PrimaryGeneratedColumn({type:'int'})
-    id:number;
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-    @Column({type:'int', nullable:false, unique:true})
-    userID:number;
-  }
-  
+@Entity()
+export class JoinList {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @Column({ type: 'int', nullable: false, unique: true })
+  userID: number;
+}

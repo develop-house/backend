@@ -4,9 +4,9 @@ import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 export const ClubType: string[] = ['public', 'social', 'private'];
 
 export class CreateClubDto {
-  @IsNumber()
+  @IsString()
   @IsNotEmpty()
-  readonly id: number;
+  readonly id: string;
 
   @IsString()
   @IsNotEmpty()

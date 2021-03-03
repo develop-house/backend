@@ -1,20 +1,26 @@
 import { User } from 'src/user/entity/user.entity';
 import {
-    Column,
-    CreateDateColumn,
-    Entity,
-    OneToOne,
-  } from 'typeorm';
-  
-  @Entity()
-  export class Blacklist {
-    @OneToOne(type=>User, user=>user.id)
-    userid:number;
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
-    @Column({unique:false, nullable:false, default:0})
-    nickname:number;
+@Entity()
+export class Blacklist {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-    @CreateDateColumn({nullable:true, default:null})
-    disableAt:Date;
-  }
-  
+  @Column({ unique: false, nullable: false, default: 0 })
+  nickname: number;
+
+  @CreateDateColumn({ nullable: true, default: null })
+  disableAt: Date;
+
+  //blacklist
+  @OneToOne(() => User)
+  @JoinColumn()
+  user: User;
+}

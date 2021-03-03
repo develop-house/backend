@@ -1,27 +1,29 @@
 import { User } from 'src/user/entity/user.entity';
 import {
-    Column,
-    Entity,
-    OneToOne,
-    PrimaryGeneratedColumn,
-  } from 'typeorm';
-  
-  @Entity()
-  export class Profile {
-    @PrimaryGeneratedColumn({type:'int'})
-    id:number;
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
-    @OneToOne(type=>User, user=>user.id)
-    userid:number;
+@Entity()
+export class Profile {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-    @Column({unique:true, nullable:false})
-    nickname:string;
+  @Column({ unique: true, nullable: false })
+  nickname: string;
 
-    //photo uri
-    @Column({nullable:true})
-    photo:string;
+  //photo uri
+  @Column({ nullable: true })
+  photo: string;
 
-    @Column({nullable:true})
-    introduction:string;
-  }
-  
+  @Column({ nullable: true })
+  introduction: string;
+
+  // user
+  @OneToOne(() => User)
+  @JoinColumn()
+  user: User;
+}

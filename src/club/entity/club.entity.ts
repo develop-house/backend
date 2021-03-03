@@ -12,8 +12,8 @@ import { ClubType } from '../dto/club-create.dto';
 
 @Entity()
 export class Club {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({ type: 'enum', enum: ClubType, nullable: false })
   type: string;
@@ -24,10 +24,10 @@ export class Club {
   @Column({ nullable: false })
   limit: number;
 
-  @OneToMany(type=>UserToClub, userToClub=>userToClub.clubID)
-  clubIDs:UserToClub[];
+  @OneToMany((type) => UserToClub, (userToClub) => userToClub.clubID)
+  clubIDs: UserToClub[];
 
-  @OneToOne(type=>JoinList)
+  @OneToOne((type) => JoinList)
   @JoinColumn()
-  joinList:JoinList;
+  joinList: JoinList;
 }
