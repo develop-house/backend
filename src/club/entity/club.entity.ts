@@ -1,13 +1,5 @@
-import { JoinList } from 'src/join_list/entity/joinList.entity';
 import { UserToClub } from 'src/user_to_club/entity/userToClub.entity';
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  OneToMany,
-  OneToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { ClubType } from '../dto/club-create.dto';
 
 @Entity()
@@ -26,8 +18,4 @@ export class Club {
 
   @OneToMany((type) => UserToClub, (userToClub) => userToClub.clubID)
   clubIDs: UserToClub[];
-
-  @OneToOne((type) => JoinList)
-  @JoinColumn()
-  joinList: JoinList;
 }

@@ -1,5 +1,11 @@
 import { Club } from 'src/club/entity/club.entity';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class JoinList {
@@ -8,4 +14,8 @@ export class JoinList {
 
   @Column({ type: 'int', nullable: false, unique: true })
   userID: number;
+
+  @OneToOne((type) => Club)
+  @JoinColumn()
+  club: Club;
 }
