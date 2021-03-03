@@ -1,3 +1,4 @@
+import { User } from 'src/user/entity/user.entity';
 import { UserToClub } from 'src/user_to_club/entity/userToClub.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { ClubType } from '../dto/club-create.dto';
@@ -16,6 +17,6 @@ export class Club {
   @Column({ nullable: false })
   limit: number;
 
-  @OneToMany((type) => UserToClub, (userToClub) => userToClub.clubID)
-  clubIDs: UserToClub[];
+  @OneToMany((type)=>User, (user)=>user.id)
+  users:User[];
 }

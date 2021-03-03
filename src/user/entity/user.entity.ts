@@ -1,11 +1,12 @@
+import { Club } from 'src/club/entity/club.entity';
 import { Follow } from 'src/follow/entitiy/follow.entity';
-import { UserToClub } from 'src/user_to_club/entity/userToClub.entity';
 import {
   Column,
   Entity,
   PrimaryGeneratedColumn,
   ManyToMany,
   OneToMany,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity()
@@ -29,7 +30,6 @@ export class User {
   @ManyToMany((type) => Follow, (follow) => follow.following)
   following: Follow[];
 
-  //userToClub
-  @OneToMany((type) => UserToClub, (userToClub) => userToClub.userID)
-  userIDs: UserToClub[];
+  @ManyToOne((type)=>Club, (club)=>club.users)
+  clubID:Club;
 }
