@@ -23,7 +23,7 @@ export class Profile {
   introduction: string;
 
   // user
-  @OneToOne(() => User)
+  @OneToOne(() => User, { cascade: true })
   @JoinColumn()
   user: User;
 }
