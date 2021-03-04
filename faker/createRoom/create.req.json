@@ -1,0 +1,25 @@
+{
+    "url":"/createRoom",
+    "method":"POST",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "body":{
+        "type":"public",
+        "moderator":"userid",
+        "topic":"Javascipt, 이대로 괜찮은가?",
+        "description":"이 클럽은 자바스크립트에 대한 토론을 하는 클럽입니다.",
+        "limit":"100",
+        "population":[
+            {
+                "id":"userid"
+            },
+            {
+                "id":"userid"
+            },
+            {
+                "id":"userid"
+            }
+        ]
+    }
+}

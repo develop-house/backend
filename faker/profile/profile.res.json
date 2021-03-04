@@ -1,0 +1,40 @@
+
+{
+    "status":{
+        "code":200,
+        "message":"잘못된 요청이면 여기에 이유가 적혀집니다.",
+        "method":"GET",
+        "api":"/{userid}/profile"
+    },
+    "profile":{
+        "profile":"/foo/bar.png",
+        "nickname":"react",
+        "introduction":"dwqdqwdwqd",
+        "joinlist":[
+            {
+                "topic":"javascript,이대로 괜찮은가?"
+            },
+            {
+                "topic":"초코파이보다 오예스가 맛있는 이유"
+            }
+        ],
+        "following":[
+            {
+                "id":"userid",
+                "profile":"/foo/bar.png"
+            },
+            {
+                "id":"userid",
+                "profile":"/foo/bar.png"
+            },
+            {
+                "id":"userid",
+                "profile":"/foo/bar.png"
+            },
+            {
+                "id":"userid",
+                "profile":"/foo/bar.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "status":{
+        "code":200,
+        "message":"잘못된 요청이면 여기에 이유가 적혀집니다.",
+        "method":"POST",
+        "api":"/search"
+    },
+    "search":{
+        "people":[
+            {
+                "id":"user-uuid1",
+                "profile":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/400px-React-icon.svg.png",
+                "nickname":"React",
+                "introduction":"선언형. React는 상호작용이 많은 UI를 만들 때 생기는 어려움을 줄여줍니다. 애플리케이션의 각 상태에 대한 간단한 뷰만 설계하세요."
+            },
+            {
+                "id":"user-uuid2",
+                "profile":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/500px-Angular_full_color_logo.svg.png",
+                "nickname":"Angular",
+                "introduction":"AngularJS('Angular.js' 또는 'AngularJS 1.X')는 자바스크립트 기반의 오픈 소스 프론트엔드 웹 애플리케이션 프레임워크의 하나로, 싱글 페이지 애플리케이션 개발 중에 마주치는 여러 문제들을 해결하기 위해 개발되었으며 주로 구글과 개별 커뮤니티, 여러 회사에 의해 유지보수되고 있다. 자바스크립트 구성 요소들은 크로스 플랫폼 모바일 앱을 개발하기 위해 사용되는 프레임워크인 아파치 코도바를 보완한다."
+            },
+            {
+                "id":"user-uuid3",
+                "profile":"https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
+                "nickname":"Vue",
+                "introduction":"Vue.js(간단히 Vue, /vjuː/, 뷰/view)는 웹 애플리케이션의 사용자 인터페이스를 만들기 위해 사용하는 오픈 소스 프로그레시브 자바스크립트 프레임워크이다."
+            }
+        ],
+        "clubs":[
+            {
+                "id":"uuid2w14141",
+                "population":25,
+                "moderator":{
+                    "id":"user-uuid3",
+                    "nickname":"Vue",
+                    "profile":"https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png"
+                },
+                "limit":50,
+                "topic":"Javascript, 이대로 괜찮은가?",
+                "type":"open"
+            },
+            {
+                "id":"uuid2cewqveqvq",
+                "population":5,
+                "moderator":{
+                    "id":"user-uuid1",
+                    "nickname":"React",
+                    "profile":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/400px-React-icon.svg.png"
+                },
+                "limit":20,
+                "topic":"React creator social group",
+                "type":"social"
+            }
+        ]
+    }
+}

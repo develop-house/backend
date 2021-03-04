@@ -1,0 +1,15 @@
+{
+    "method":"PUT",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "body":{
+        "setting":{
+            "alarm":{
+                "getAlarm":true,
+                "includeTrendingRooms":true,
+                "pauseNotifications":true
+            }
+        }
+    }
+}

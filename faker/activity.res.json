@@ -1,0 +1,28 @@
+{
+    "status":{
+        "code":200,
+        "message":"잘못된 요청이면 여기에 이유가 적혀집니다.",
+        "method":"GET",
+        "api":"/{userid}/activity"
+    },
+    "activity":[
+        {
+            "id":"user-uuid1",
+            "nickanme":"react",
+            "profile":"/foo/bar.png",
+            "message":"react가 vue님을 팔로우했습니다."
+        },
+        {
+            "id":"user-uuid2",
+            "nickanme":"react",
+            "profile":"/foo/bar.png",
+            "message":"react가 vue님을 팔로우했습니다."
+        },
+        {
+            "id":"user-uuid3",
+            "nickanme":"react",
+            "profile":"/foo/bar.png",
+            "message":"react가 vue님을 팔로우했습니다."
+        }
+    ]
+}

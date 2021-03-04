@@ -1,0 +1,25 @@
+{
+    "method":"PUT",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "body":{
+        "interest":{
+            "count":10,
+            "entertainment":{
+                "game":true,
+                "singing":true,
+                "play":false
+            },
+            "religion":{
+                "christ":true,
+                "hinduism":false
+            },
+            "hobby":{
+                "cook":false,
+                "make":true
+            }
+        }
+    }
+}
+
