@@ -10,10 +10,10 @@ export class Club {
   @Column({ type: 'enum', enum: ClubType, nullable: false })
   type: string;
 
-  @Column({ default: null })
+  @Column({ type: 'varchar', length: 300, default: null, nullable: true })
   description: string | null;
 
-  @Column({ nullable: false })
+  @Column({ type: 'int', nullable: false })
   limit: number;
 
   @OneToMany((type) => User, (user) => user.id)

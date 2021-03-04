@@ -12,14 +12,14 @@ export class Profile {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ unique: true, nullable: false })
+  @Column({ type: 'varchar', length: 50, unique: true, nullable: false })
   nickname: string;
 
   //photo uri
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', length: 50, nullable: true })
   photo: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', length: 200, nullable: true })
   introduction: string;
 
   // user

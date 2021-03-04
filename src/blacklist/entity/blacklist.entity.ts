@@ -14,9 +14,9 @@ export class Blacklist {
   id: string;
 
   @Column({ unique: false, nullable: false, default: 0 })
-  nickname: number;
+  count: number;
 
-  @CreateDateColumn({ type: 'timestamp', default: null, nullable:true })
+  @CreateDateColumn({ type: 'timestamp', default: null, nullable: true })
   disableAt: Date;
 
   //blacklist

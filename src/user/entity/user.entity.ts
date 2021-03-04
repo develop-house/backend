@@ -14,13 +14,17 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  @Column({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP',
+    nullable: false,
+  })
   createdAt: Date;
 
   @Column({ type: 'varchar', length: 50, unique: true, nullable: false })
   email: string;
 
-  @Column({ type: 'varchar', length: 50, unique: true, nullable: false })
+  @Column({ type: 'varchar', length: 200, nullable: false })
   password: string;
 
   //follow
@@ -30,6 +34,6 @@ export class User {
   @ManyToMany((type) => Follow, (follow) => follow.following)
   following: Follow[];
 
-  @ManyToOne((type)=>Club, (club)=>club.users)
-  clubID:Club;
+  @ManyToOne((type) => Club, (club) => club.users)
+  clubID: Club;
 }
