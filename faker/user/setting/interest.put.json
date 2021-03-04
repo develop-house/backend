@@ -1,4 +1,5 @@
 {
+    "api":"/{userid}/interest",
     "method":"PUT",
     "headers":{
         "Content-Type": "application/json"

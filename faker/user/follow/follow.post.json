@@ -1,0 +1,11 @@
+{
+    "url":"/{userid}/follow",
+    "method":"POST",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "body":{
+        "follower":"userid",
+        "following":"followingID"
+    }
+}

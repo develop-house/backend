@@ -2,11 +2,13 @@
     "status":{
         "code":200,
         "message":"잘못된 요청이면 여기에 이유가 적혀집니다.",
-        "method":"GET",
-        "api":"/{userid}/friends"
+        "api":"/club/{clubid}"
     },
-    "friends":{
-        "joinClub":[
+    "club":{
+        "id":"clubid",
+        "topic":"javascript, 이대로 괜찮은가?",
+        "moderator":"userid",
+        "speaker":[
             {
                 "id":"userid",
                 "profile":"/foo/bar.png"
@@ -16,7 +18,7 @@
                 "profile":"/foo/bar.png"
             }
         ],
-        "friendList":[
+        "audience":[
             {
                 "id":"userid",
                 "profile":"/foo/bar.png"
@@ -24,7 +26,7 @@
             {
                 "id":"userid",
                 "profile":"/foo/bar.png"
-            } 
+            }
         ]
     }
 }

@@ -1,0 +1,10 @@
+{
+    "url":"/club/invite",
+    "method":"POST",
+    "headers":{
+        "Content-Type": "application/json"
+    },
+    "body":{
+        "userid":"userid"
+    }
+}

@@ -2,7 +2,6 @@
     "status":{
         "code":200,
         "message":"잘못된 요청이면 여기에 이유가 적혀집니다.",
-        "method":"GET",
         "api":"/{userid}/activity"
     },
     "activity":[
