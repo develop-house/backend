@@ -4,10 +4,8 @@ import {
   Column,
   Entity,
   PrimaryGeneratedColumn,
-  ManyToMany,
   OneToMany,
   ManyToOne,
-  OneToOne,
 } from 'typeorm';
 
 @Entity()

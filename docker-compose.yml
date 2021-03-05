@@ -1,4 +1,4 @@
-version: "3.5"
+version: '3.5'
 services:
   devhoust-backend:
     links:
@@ -8,13 +8,14 @@ services:
     restart: always
     build: .
     ports:
-      - "13000:13000"
+      - '13000:13000'
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-      
+
   db:
     image: mysql:5.7
+    platform: linux/amd64
     container_name: db_mysql
     volumes:
       - db_data:/var/lib/mysql
@@ -23,6 +24,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: devhouse
     ports:
-      - "3306:3306"
+      - '3306:3306'
 volumes:
   db_data:

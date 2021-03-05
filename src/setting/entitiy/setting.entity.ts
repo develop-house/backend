@@ -1,11 +1,13 @@
 import { User } from 'src/user/entity/user.entity';
-import { Column, Entity, JoinColumn, OneToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Setting {
+  @PrimaryColumn()
+  userid: string;
   // user
   @OneToOne(() => User, { cascade: true })
-  @JoinColumn()
+  @JoinColumn({ name: 'userid' })
   user: User;
 
   @Column({ type: 'boolean', default: true, nullable: false })
