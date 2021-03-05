@@ -7,6 +7,7 @@ import {
   ManyToMany,
   OneToMany,
   ManyToOne,
+  OneToOne,
 } from 'typeorm';
 
 @Entity()
@@ -31,9 +32,9 @@ export class User {
   @OneToMany((type) => Follow, (follow) => follow.follower)
   followers: Follow[];
 
-  @ManyToMany((type) => Follow, (follow) => follow.following)
+  @OneToMany((type) => Follow, (follow) => follow.following)
   following: Follow[];
 
   @ManyToOne((type) => Club, (club) => club.users)
-  clubID: Club;
+  club: Club;
 }
