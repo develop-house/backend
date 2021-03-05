@@ -1,14 +1,12 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { ClubController } from './club.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Club } from './entity/club.entity';
 import { ClubService } from './club.service';
-import { Club, ClubSchema } from './schemas/club.schema';
+import { ClubController } from './club.controller';
 
 @Module({
-  imports: [
-    MongooseModule.forFeature([{ name: Club.name, schema: ClubSchema }]),
-  ],
-  controllers: [ClubController],
+  imports: [TypeOrmModule.forFeature([Club])],
   providers: [ClubService],
+  controllers: [ClubController],
 })
 export class ClubModule {}

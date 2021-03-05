@@ -1,15 +1,16 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateClubDto } from './dto/club-create.dto';
-import { Club } from './schemas/club.schema';
+import { Club } from './entity/club.entity';
 import { ClubService } from './club.service';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('Club')
+@ApiTags('Club')
+@Controller('club')
 export class ClubController {
   constructor(private clubService: ClubService) {}
   @Get('/')
   async findAll(): Promise<Club[]> {
-    const ClubList = await this.clubService.findAll();
-    return ClubList;
+    return await this.clubService.findAll();
   }
 
   @Post('/create')
