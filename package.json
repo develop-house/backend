@@ -30,6 +30,8 @@
     "@nestjs/swagger": "^4.7.13",
     "@nestjs/typeorm": "^7.1.5",
     "@nestjs/websockets": "^7.6.12",
+    "@types/bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.1",
     "class-validator": "^0.13.1",
     "mongoose": "^5.11.17",
     "mysql2": "^2.2.5",
