@@ -11,16 +11,16 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   @IsEmail()
-  @ApiProperty({ default: 'abc@abc.com' })
+  @ApiProperty()
   readonly email: string;
 
   @IsNotEmpty()
   @IsString()
-  @ApiProperty({ default: '1234' })
+  @ApiProperty()
   readonly password: string;
 
   @IsNotEmpty()
   @IsString()
-  @ApiProperty({ default: 'adc' })
+  @ApiProperty()
   readonly nickname: string;
 }
