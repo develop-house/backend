@@ -1,24 +1,4 @@
-type MessageSturcture = {
-  nickname: {
-    incorrectFormat: string;
-    duplicate: string;
-  };
-  password: {
-    incorrectFormat: string;
-    notEqual: string;
-  };
-  email: {
-    incorrectFormat: string;
-    alreadyExisting: string;
-  };
-  user: {
-    noExisting: string;
-    failedJoin: string;
-  };
-  success: string;
-};
-
-export const message: MessageSturcture = {
+export const message = {
   nickname: {
     incorrectFormat: '올바르지 않은 닉네임 형식입니다.',
     duplicate: '이미 사용 중인 닉네임입니다.',
@@ -38,9 +18,9 @@ export const message: MessageSturcture = {
   success: 'Succeed!',
 };
 
-export type Nickname = Partial<MessageSturcture['nickname']>;
-export type Password = Partial<MessageSturcture['password']>;
-export type Email = Partial<MessageSturcture['email']>;
-export type User = Partial<MessageSturcture['user']>;
-export type Success = MessageSturcture['success'];
+export type Nickname = Partial<typeof message['nickname']>;
+export type Password = Partial<typeof message['password']>;
+export type Email = Partial<typeof message['email']>;
+export type User = Partial<typeof message['user']>;
+export type Success = typeof message['success'];
 export type Message = Nickname | Password | Email | User | Success;
