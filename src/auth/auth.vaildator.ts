@@ -15,11 +15,11 @@ class AuthVaildator {
 
   private match(target: string, type: string): RegExpMatchArray | null {
     switch (type) {
-      case 'password':
+      case this.PASSWORD:
         return target.match(this.passwordRegex);
-      case 'nickname':
+      case this.NICKNAME:
         return target.match(this.nicknameRegex);
-      case 'email':
+      case this.EMAIL:
         return target.match(this.emailRegex);
     }
   }
